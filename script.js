@@ -54,9 +54,16 @@ function handleColorRange (){
     range = parseInt(this.dataset.colorRange)
    
 }
+//slider info function
+
+const showSliderInfo = () =>{
+    sliderValue = slider.value;
+    sliderInfo.textContent = sliderValue;
+}
+
 
 speedBtns.forEach(btn => btn.addEventListener('click', handleSpeed))
 colorBtns.forEach(btn => btn.addEventListener('click', handleColorRange))
-
+slider.addEventListener('mousemove', showSliderInfo)
 
 createSquare()
